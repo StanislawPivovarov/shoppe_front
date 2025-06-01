@@ -1,0 +1,29 @@
+.wrapper {
+ display: flex;
+ flex-direction:  column;
+ width: 100%;
+ gap: 14px;
+}
+
+.title {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ row-gap: 24px;
+ column-gap: 16px;
+}
+
+.title_text {
+ margin: 0;
+}
+
+.view_all {
+ text-decoration: none;
+ color: var(--accent-color);
+}
