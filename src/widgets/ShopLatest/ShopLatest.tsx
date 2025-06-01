@@ -1,4 +1,6 @@
+import { ProductCard } from '../ProductCard'
 import cls from './ShopLatest.module.scss'
+import { products } from '../../shared/mock'
 
 
 export const ShopLatest = () => {
@@ -9,7 +11,19 @@ export const ShopLatest = () => {
     <a className={cls.view_all} href="#">View all</a>
    </div>
    <div className={cls.grid}>
-
+    {
+     products.map((item) => {
+      return(
+       <ProductCard
+       discount={item.discount}
+       oldPrice={item.oldPrice}
+       newPrice={item.newPrice}
+       title={item.title}
+       cover={item.cover}
+       />
+      )
+     })
+    }
    </div>
   </div>
  )
