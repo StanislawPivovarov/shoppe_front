@@ -9,7 +9,7 @@ interface IProductCard {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export const ProductCard = (props: IProductCard) => {
+export const ProductCard = (_props: IProductCard) => {
  return(
   <div className={cls.product}>
    <div className={cls.img_wrapper}>
