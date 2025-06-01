@@ -15,31 +15,31 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 23
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with Vite
+      - name: Build project
         run: npm run build
 
-      - name: Upload dist to GitHub Pages
+      - name: Upload build output
         uses: actions/upload-pages-artifact@v2
         with:
-          path: dist
+          path: ./dist
 
   deploy:
-    needs: build-and-deploy
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
