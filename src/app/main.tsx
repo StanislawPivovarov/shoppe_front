@@ -14,7 +14,7 @@ createRoot(document.getElementById('root')!).render(
         }
       }}
     >
-      <BrowserRouter>
+      <BrowserRouter basename='/shoppe_front/'>
         <App />
       </BrowserRouter>
     </ConfigProvider>

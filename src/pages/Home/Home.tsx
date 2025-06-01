@@ -3,11 +3,11 @@ import { MainCarousel } from "../../widgets/MainCarousel/MainCarousel";
 import { ShopLatest } from "../../widgets/ShopLatest";
 import cls from './Home.module.scss'
 const Home = () => {
- return(
+ return (
   <div className={cls.content}>
-   <SearchInput/>
-   <MainCarousel/>
-   <ShopLatest/>
+   <SearchInput />
+   <MainCarousel />
+   <ShopLatest />
   </div>
  )
 }
