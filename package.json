@@ -8,7 +8,7 @@
   "build": "tsc -b && vite build",
   "lint": "eslint .",
   "preview": "vite preview",
-  "deploy": "pnpm build && gh-pages -d dist -b gh-pages"
+  "gp": "pnpm build && gh-pages -d dist -b gh-pages"
 },
   "dependencies": {
     "antd": "^5.25.4",
