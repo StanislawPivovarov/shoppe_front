@@ -8,6 +8,7 @@ interface IProductCard {
  cover: string
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const ProductCard = (props: IProductCard) => {
  return(
   <div className={cls.product}>
